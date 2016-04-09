@@ -48,10 +48,10 @@
 
 - (void)viewDidLoad
 {
-    [self initChildViewController:[[DGHomeController alloc]init] Title:@"首页" Image:@"tabBar_essence_icon" SelectImage:@"tabBar_essence_click_icon"];
-    [self initChildViewController:[[DGLiveController alloc]init] Title:@"直播" Image:@"tabBar_new_icon" SelectImage:@"tabBar_new_click_icon"];
-    [self initChildViewController:[[DGFocusController alloc]init] Title:@"关注" Image:@"tabBar_friendTrends_icon" SelectImage:@"tabBar_friendTrends_click_icon"];
-    [self initChildViewController:[[DGMeController alloc]init] Title:@"我" Image:@"tabBar_me_icon" SelectImage:@"tabBar_me_click_icon"];
+    [self initChildViewController:[[UINavigationController alloc]initWithRootViewController:[[DGHomeController alloc]init]] Title:@"首页" Image:@"首页" SelectImage:@"首页pressed"];
+    [self initChildViewController:[[DGLiveController alloc]init] Title:@"直播" Image:@"直播" SelectImage:@"直播pressed"];
+    [self initChildViewController:[[DGFocusController alloc]init] Title:@"关注" Image:@"关注" SelectImage:@"关注pressed"];
+    [self initChildViewController:[[DGMeController alloc]init] Title:@"我" Image:@"个人中心" SelectImage:@"个人中心pressed"];
     
     //KVC替换默认tabbar
 //    [self setValue:[[HKTabBar alloc]init] forKeyPath:@"tabBar"];

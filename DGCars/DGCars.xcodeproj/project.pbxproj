@@ -7,9 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0D5637A21CB8D84D00BB23F4 /* NSString+Hash.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D56379D1CB8D84D00BB23F4 /* NSString+Hash.m */; };
+		0D5637A31CB8D84D00BB23F4 /* UIBarButtonItem+HKExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D56379F1CB8D84D00BB23F4 /* UIBarButtonItem+HKExtension.m */; };
+		0D5637A41CB8D84D00BB23F4 /* UIView+HKExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D5637A11CB8D84D00BB23F4 /* UIView+HKExtension.m */; };
+		0D5637AD1CB8ED3600BB23F4 /* DGrecommendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D5637AC1CB8ED3600BB23F4 /* DGrecommendViewController.m */; };
+		0D5637B01CB8ED6D00BB23F4 /* DGentertainController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D5637AF1CB8ED6D00BB23F4 /* DGentertainController.m */; };
+		0D5637B31CB8ED8D00BB23F4 /* DGgameController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D5637B21CB8ED8D00BB23F4 /* DGgameController.m */; };
+		0D5637B61CB8EDB400BB23F4 /* DGWonderfulController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D5637B51CB8EDB400BB23F4 /* DGWonderfulController.m */; };
+		0D5637BA1CB906C800BB23F4 /* DGHomeRoundCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D5637B81CB906C800BB23F4 /* DGHomeRoundCell.m */; };
+		0D5637BB1CB906C800BB23F4 /* DGHomeRoundCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0D5637B91CB906C800BB23F4 /* DGHomeRoundCell.xib */; };
+		0D5637BF1CB906F800BB23F4 /* DGHomeSquareCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D5637BD1CB906F800BB23F4 /* DGHomeSquareCell.m */; };
+		0D5637C01CB906F800BB23F4 /* DGHomeSquareCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0D5637BE1CB906F800BB23F4 /* DGHomeSquareCell.xib */; };
 		0DEA57B31CB8B32400532911 /* DGTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DEA57B21CB8B32400532911 /* DGTabBarController.m */; };
 		0DEA57B71CB8B43F00532911 /* DGHomeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DEA57B51CB8B43F00532911 /* DGHomeController.m */; };
-		0DEA57B81CB8B43F00532911 /* DGHomeController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0DEA57B61CB8B43F00532911 /* DGHomeController.xib */; };
 		0DEA57BC1CB8B49700532911 /* DGLiveController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DEA57BA1CB8B49700532911 /* DGLiveController.m */; };
 		0DEA57BD1CB8B49700532911 /* DGLiveController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0DEA57BB1CB8B49700532911 /* DGLiveController.xib */; };
 		0DEA57C11CB8B4FD00532911 /* DGFocusController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DEA57BF1CB8B4FD00532911 /* DGFocusController.m */; };
@@ -48,11 +58,31 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0D56379B1CB8D84D00BB23F4 /* Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Header.h; sourceTree = "<group>"; };
+		0D56379C1CB8D84D00BB23F4 /* NSString+Hash.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Hash.h"; sourceTree = "<group>"; };
+		0D56379D1CB8D84D00BB23F4 /* NSString+Hash.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Hash.m"; sourceTree = "<group>"; };
+		0D56379E1CB8D84D00BB23F4 /* UIBarButtonItem+HKExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+HKExtension.h"; sourceTree = "<group>"; };
+		0D56379F1CB8D84D00BB23F4 /* UIBarButtonItem+HKExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+HKExtension.m"; sourceTree = "<group>"; };
+		0D5637A01CB8D84D00BB23F4 /* UIView+HKExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+HKExtension.h"; sourceTree = "<group>"; };
+		0D5637A11CB8D84D00BB23F4 /* UIView+HKExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+HKExtension.m"; sourceTree = "<group>"; };
+		0D5637AB1CB8ED3600BB23F4 /* DGrecommendViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DGrecommendViewController.h; sourceTree = "<group>"; };
+		0D5637AC1CB8ED3600BB23F4 /* DGrecommendViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DGrecommendViewController.m; sourceTree = "<group>"; };
+		0D5637AE1CB8ED6D00BB23F4 /* DGentertainController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DGentertainController.h; sourceTree = "<group>"; };
+		0D5637AF1CB8ED6D00BB23F4 /* DGentertainController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DGentertainController.m; sourceTree = "<group>"; };
+		0D5637B11CB8ED8D00BB23F4 /* DGgameController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DGgameController.h; sourceTree = "<group>"; };
+		0D5637B21CB8ED8D00BB23F4 /* DGgameController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DGgameController.m; sourceTree = "<group>"; };
+		0D5637B41CB8EDB400BB23F4 /* DGWonderfulController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DGWonderfulController.h; sourceTree = "<group>"; };
+		0D5637B51CB8EDB400BB23F4 /* DGWonderfulController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DGWonderfulController.m; sourceTree = "<group>"; };
+		0D5637B71CB906C800BB23F4 /* DGHomeRoundCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DGHomeRoundCell.h; sourceTree = "<group>"; };
+		0D5637B81CB906C800BB23F4 /* DGHomeRoundCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DGHomeRoundCell.m; sourceTree = "<group>"; };
+		0D5637B91CB906C800BB23F4 /* DGHomeRoundCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DGHomeRoundCell.xib; sourceTree = "<group>"; };
+		0D5637BC1CB906F800BB23F4 /* DGHomeSquareCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DGHomeSquareCell.h; sourceTree = "<group>"; };
+		0D5637BD1CB906F800BB23F4 /* DGHomeSquareCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DGHomeSquareCell.m; sourceTree = "<group>"; };
+		0D5637BE1CB906F800BB23F4 /* DGHomeSquareCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DGHomeSquareCell.xib; sourceTree = "<group>"; };
 		0DEA57B11CB8B32400532911 /* DGTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DGTabBarController.h; sourceTree = "<group>"; };
 		0DEA57B21CB8B32400532911 /* DGTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DGTabBarController.m; sourceTree = "<group>"; };
 		0DEA57B41CB8B43F00532911 /* DGHomeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DGHomeController.h; sourceTree = "<group>"; };
 		0DEA57B51CB8B43F00532911 /* DGHomeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DGHomeController.m; sourceTree = "<group>"; };
-		0DEA57B61CB8B43F00532911 /* DGHomeController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DGHomeController.xib; sourceTree = "<group>"; };
 		0DEA57B91CB8B49700532911 /* DGLiveController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DGLiveController.h; sourceTree = "<group>"; };
 		0DEA57BA1CB8B49700532911 /* DGLiveController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DGLiveController.m; sourceTree = "<group>"; };
 		0DEA57BB1CB8B49700532911 /* DGLiveController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DGLiveController.xib; sourceTree = "<group>"; };
@@ -115,9 +145,29 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0D56379A1CB8D82300BB23F4 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				0D56379B1CB8D84D00BB23F4 /* Header.h */,
+				0D56379C1CB8D84D00BB23F4 /* NSString+Hash.h */,
+				0D56379D1CB8D84D00BB23F4 /* NSString+Hash.m */,
+				0D56379E1CB8D84D00BB23F4 /* UIBarButtonItem+HKExtension.h */,
+				0D56379F1CB8D84D00BB23F4 /* UIBarButtonItem+HKExtension.m */,
+				0D5637A01CB8D84D00BB23F4 /* UIView+HKExtension.h */,
+				0D5637A11CB8D84D00BB23F4 /* UIView+HKExtension.m */,
+			);
+			name = Extension;
+			sourceTree = "<group>";
+		};
 		0DED9C9C1CB5C989002EA021 = {
 			isa = PBXGroup;
 			children = (
+				0D5637BC1CB906F800BB23F4 /* DGHomeSquareCell.h */,
+				0D5637BD1CB906F800BB23F4 /* DGHomeSquareCell.m */,
+				0D5637BE1CB906F800BB23F4 /* DGHomeSquareCell.xib */,
+				0D5637B71CB906C800BB23F4 /* DGHomeRoundCell.h */,
+				0D5637B81CB906C800BB23F4 /* DGHomeRoundCell.m */,
+				0D5637B91CB906C800BB23F4 /* DGHomeRoundCell.xib */,
 				0DED9CA71CB5C989002EA021 /* DGCars */,
 				0DED9CC11CB5C989002EA021 /* DGCarsTests */,
 				0DED9CCC1CB5C989002EA021 /* DGCarsUITests */,
@@ -140,6 +190,7 @@
 		0DED9CA71CB5C989002EA021 /* DGCars */ = {
 			isa = PBXGroup;
 			children = (
+				0D56379A1CB8D82300BB23F4 /* Extension */,
 				0DED9CAB1CB5C989002EA021 /* AppDelegate.h */,
 				0DED9CAC1CB5C989002EA021 /* AppDelegate.m */,
 				0DED9CAE1CB5C989002EA021 /* ViewController.h */,
@@ -159,7 +210,6 @@
 				0DEA57B21CB8B32400532911 /* DGTabBarController.m */,
 				0DEA57B41CB8B43F00532911 /* DGHomeController.h */,
 				0DEA57B51CB8B43F00532911 /* DGHomeController.m */,
-				0DEA57B61CB8B43F00532911 /* DGHomeController.xib */,
 				0DEA57B91CB8B49700532911 /* DGLiveController.h */,
 				0DEA57BA1CB8B49700532911 /* DGLiveController.m */,
 				0DEA57BB1CB8B49700532911 /* DGLiveController.xib */,
@@ -169,6 +219,14 @@
 				0DEA57C31CB8B51400532911 /* DGMeController.h */,
 				0DEA57C41CB8B51400532911 /* DGMeController.m */,
 				0DEA57C51CB8B51400532911 /* DGMeController.xib */,
+				0D5637AB1CB8ED3600BB23F4 /* DGrecommendViewController.h */,
+				0D5637AC1CB8ED3600BB23F4 /* DGrecommendViewController.m */,
+				0D5637AE1CB8ED6D00BB23F4 /* DGentertainController.h */,
+				0D5637AF1CB8ED6D00BB23F4 /* DGentertainController.m */,
+				0D5637B11CB8ED8D00BB23F4 /* DGgameController.h */,
+				0D5637B21CB8ED8D00BB23F4 /* DGgameController.m */,
+				0D5637B41CB8EDB400BB23F4 /* DGWonderfulController.h */,
+				0D5637B51CB8EDB400BB23F4 /* DGWonderfulController.m */,
 			);
 			path = DGCars;
 			sourceTree = "<group>";
@@ -327,8 +385,9 @@
 			files = (
 				0DEA57BD1CB8B49700532911 /* DGLiveController.xib in Resources */,
 				0DED9CB81CB5C989002EA021 /* LaunchScreen.storyboard in Resources */,
+				0D5637C01CB906F800BB23F4 /* DGHomeSquareCell.xib in Resources */,
 				0DEA57C71CB8B51400532911 /* DGMeController.xib in Resources */,
-				0DEA57B81CB8B43F00532911 /* DGHomeController.xib in Resources */,
+				0D5637BB1CB906C800BB23F4 /* DGHomeRoundCell.xib in Resources */,
 				0DED9CB51CB5C989002EA021 /* Assets.xcassets in Resources */,
 				0DED9CB31CB5C989002EA021 /* Main.storyboard in Resources */,
 				0DEA57C21CB8B4FD00532911 /* DGFocusController.xib in Resources */,
@@ -405,16 +464,25 @@
 			buildActionMask = 2147483647;
 			files = (
 				0DEA57B31CB8B32400532911 /* DGTabBarController.m in Sources */,
+				0D5637A21CB8D84D00BB23F4 /* NSString+Hash.m in Sources */,
+				0D5637AD1CB8ED3600BB23F4 /* DGrecommendViewController.m in Sources */,
 				0DED9CE21CB70148002EA021 /* DanmuSock.m in Sources */,
+				0D5637A41CB8D84D00BB23F4 /* UIView+HKExtension.m in Sources */,
+				0D5637B61CB8EDB400BB23F4 /* DGWonderfulController.m in Sources */,
+				0D5637BF1CB906F800BB23F4 /* DGHomeSquareCell.m in Sources */,
 				0DEA57C61CB8B51400532911 /* DGMeController.m in Sources */,
 				0DED9CB01CB5C989002EA021 /* ViewController.m in Sources */,
 				0DED9CE51CB71355002EA021 /* BarrageModel.m in Sources */,
 				0DED9CAD1CB5C989002EA021 /* AppDelegate.m in Sources */,
+				0D5637BA1CB906C800BB23F4 /* DGHomeRoundCell.m in Sources */,
 				0DEA57B71CB8B43F00532911 /* DGHomeController.m in Sources */,
 				0DED9CAA1CB5C989002EA021 /* main.m in Sources */,
+				0D5637B01CB8ED6D00BB23F4 /* DGentertainController.m in Sources */,
 				0DEA57C11CB8B4FD00532911 /* DGFocusController.m in Sources */,
 				0DEA57BC1CB8B49700532911 /* DGLiveController.m in Sources */,
+				0D5637B31CB8ED8D00BB23F4 /* DGgameController.m in Sources */,
 				0DED9CE81CB7359B002EA021 /* chatmsgModel.m in Sources */,
+				0D5637A31CB8D84D00BB23F4 /* UIBarButtonItem+HKExtension.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -557,6 +625,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = DGCars/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
@@ -578,6 +647,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = DGCars/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
