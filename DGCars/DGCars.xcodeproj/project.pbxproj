@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0DEA57B31CB8B32400532911 /* DGTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DEA57B21CB8B32400532911 /* DGTabBarController.m */; };
+		0DEA57B71CB8B43F00532911 /* DGHomeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DEA57B51CB8B43F00532911 /* DGHomeController.m */; };
+		0DEA57B81CB8B43F00532911 /* DGHomeController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0DEA57B61CB8B43F00532911 /* DGHomeController.xib */; };
+		0DEA57BC1CB8B49700532911 /* DGLiveController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DEA57BA1CB8B49700532911 /* DGLiveController.m */; };
+		0DEA57BD1CB8B49700532911 /* DGLiveController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0DEA57BB1CB8B49700532911 /* DGLiveController.xib */; };
+		0DEA57C11CB8B4FD00532911 /* DGFocusController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DEA57BF1CB8B4FD00532911 /* DGFocusController.m */; };
+		0DEA57C21CB8B4FD00532911 /* DGFocusController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0DEA57C01CB8B4FD00532911 /* DGFocusController.xib */; };
+		0DEA57C61CB8B51400532911 /* DGMeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DEA57C41CB8B51400532911 /* DGMeController.m */; };
+		0DEA57C71CB8B51400532911 /* DGMeController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0DEA57C51CB8B51400532911 /* DGMeController.xib */; };
 		0DED9CAA1CB5C989002EA021 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DED9CA91CB5C989002EA021 /* main.m */; };
 		0DED9CAD1CB5C989002EA021 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DED9CAC1CB5C989002EA021 /* AppDelegate.m */; };
 		0DED9CB01CB5C989002EA021 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DED9CAF1CB5C989002EA021 /* ViewController.m */; };
@@ -39,6 +48,20 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0DEA57B11CB8B32400532911 /* DGTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DGTabBarController.h; sourceTree = "<group>"; };
+		0DEA57B21CB8B32400532911 /* DGTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DGTabBarController.m; sourceTree = "<group>"; };
+		0DEA57B41CB8B43F00532911 /* DGHomeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DGHomeController.h; sourceTree = "<group>"; };
+		0DEA57B51CB8B43F00532911 /* DGHomeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DGHomeController.m; sourceTree = "<group>"; };
+		0DEA57B61CB8B43F00532911 /* DGHomeController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DGHomeController.xib; sourceTree = "<group>"; };
+		0DEA57B91CB8B49700532911 /* DGLiveController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DGLiveController.h; sourceTree = "<group>"; };
+		0DEA57BA1CB8B49700532911 /* DGLiveController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DGLiveController.m; sourceTree = "<group>"; };
+		0DEA57BB1CB8B49700532911 /* DGLiveController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DGLiveController.xib; sourceTree = "<group>"; };
+		0DEA57BE1CB8B4FD00532911 /* DGFocusController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DGFocusController.h; sourceTree = "<group>"; };
+		0DEA57BF1CB8B4FD00532911 /* DGFocusController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DGFocusController.m; sourceTree = "<group>"; };
+		0DEA57C01CB8B4FD00532911 /* DGFocusController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DGFocusController.xib; sourceTree = "<group>"; };
+		0DEA57C31CB8B51400532911 /* DGMeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DGMeController.h; sourceTree = "<group>"; };
+		0DEA57C41CB8B51400532911 /* DGMeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DGMeController.m; sourceTree = "<group>"; };
+		0DEA57C51CB8B51400532911 /* DGMeController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DGMeController.xib; sourceTree = "<group>"; };
 		0DED9CA51CB5C989002EA021 /* DGCars.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DGCars.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0DED9CA91CB5C989002EA021 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		0DED9CAB1CB5C989002EA021 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -132,6 +155,20 @@
 				0DED9CE41CB71355002EA021 /* BarrageModel.m */,
 				0DED9CE61CB7359B002EA021 /* chatmsgModel.h */,
 				0DED9CE71CB7359B002EA021 /* chatmsgModel.m */,
+				0DEA57B11CB8B32400532911 /* DGTabBarController.h */,
+				0DEA57B21CB8B32400532911 /* DGTabBarController.m */,
+				0DEA57B41CB8B43F00532911 /* DGHomeController.h */,
+				0DEA57B51CB8B43F00532911 /* DGHomeController.m */,
+				0DEA57B61CB8B43F00532911 /* DGHomeController.xib */,
+				0DEA57B91CB8B49700532911 /* DGLiveController.h */,
+				0DEA57BA1CB8B49700532911 /* DGLiveController.m */,
+				0DEA57BB1CB8B49700532911 /* DGLiveController.xib */,
+				0DEA57BE1CB8B4FD00532911 /* DGFocusController.h */,
+				0DEA57BF1CB8B4FD00532911 /* DGFocusController.m */,
+				0DEA57C01CB8B4FD00532911 /* DGFocusController.xib */,
+				0DEA57C31CB8B51400532911 /* DGMeController.h */,
+				0DEA57C41CB8B51400532911 /* DGMeController.m */,
+				0DEA57C51CB8B51400532911 /* DGMeController.xib */,
 			);
 			path = DGCars;
 			sourceTree = "<group>";
@@ -288,9 +325,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0DEA57BD1CB8B49700532911 /* DGLiveController.xib in Resources */,
 				0DED9CB81CB5C989002EA021 /* LaunchScreen.storyboard in Resources */,
+				0DEA57C71CB8B51400532911 /* DGMeController.xib in Resources */,
+				0DEA57B81CB8B43F00532911 /* DGHomeController.xib in Resources */,
 				0DED9CB51CB5C989002EA021 /* Assets.xcassets in Resources */,
 				0DED9CB31CB5C989002EA021 /* Main.storyboard in Resources */,
+				0DEA57C21CB8B4FD00532911 /* DGFocusController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -363,11 +404,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0DEA57B31CB8B32400532911 /* DGTabBarController.m in Sources */,
 				0DED9CE21CB70148002EA021 /* DanmuSock.m in Sources */,
+				0DEA57C61CB8B51400532911 /* DGMeController.m in Sources */,
 				0DED9CB01CB5C989002EA021 /* ViewController.m in Sources */,
 				0DED9CE51CB71355002EA021 /* BarrageModel.m in Sources */,
 				0DED9CAD1CB5C989002EA021 /* AppDelegate.m in Sources */,
+				0DEA57B71CB8B43F00532911 /* DGHomeController.m in Sources */,
 				0DED9CAA1CB5C989002EA021 /* main.m in Sources */,
+				0DEA57C11CB8B4FD00532911 /* DGFocusController.m in Sources */,
+				0DEA57BC1CB8B49700532911 /* DGLiveController.m in Sources */,
 				0DED9CE81CB7359B002EA021 /* chatmsgModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
