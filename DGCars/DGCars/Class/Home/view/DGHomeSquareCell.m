@@ -20,4 +20,18 @@
     // Configure the view for the selected state
 }
 
+- (void)squareCellWith:(NSArray *)arry
+{
+
+}
+
+- (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier{
+    self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
+    if (self) {
+        //取消单元格选中效果
+        self.selectionStyle = UITableViewCellSelectionStyleNone;
+    }
+    return self;
+}
+
 @end

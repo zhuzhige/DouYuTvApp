@@ -10,8 +10,8 @@
 
 @interface BarrageModel : NSObject
 
-@property(nonatomic, strong)NSString *host;
+@property(nonatomic, copy)NSString *host;
 @property(nonatomic, assign)UInt16 port;
-@property(nonatomic, strong)NSString *roomID;
+@property(nonatomic, copy)NSString *roomID;
 
 @end

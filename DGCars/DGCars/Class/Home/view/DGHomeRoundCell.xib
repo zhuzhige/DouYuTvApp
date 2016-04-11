@@ -7,53 +7,28 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="101" id="KGk-i7-Jjw" customClass="DGHomeRoundCell">
-            <rect key="frame" x="0.0" y="0.0" width="78" height="101"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="59" id="KGk-i7-Jjw" customClass="DGHomeRoundCell">
+            <rect key="frame" x="0.0" y="0.0" width="315" height="100"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="78" height="100.5"/>
+                <rect key="frame" x="0.0" y="0.0" width="315" height="99.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="NNF-10-lx7">
-                        <rect key="frame" x="9" y="10" width="60" height="60"/>
-                        <constraints>
-                            <constraint firstAttribute="height" constant="60" id="VLt-Rq-WI3"/>
-                            <constraint firstAttribute="width" constant="60" id="fs4-oB-rEh"/>
-                            <constraint firstAttribute="height" constant="60" id="jZw-m0-phb"/>
-                            <constraint firstAttribute="width" constant="60" id="pd0-pz-fzj"/>
-                        </constraints>
-                        <variation key="default">
-                            <mask key="constraints">
-                                <exclude reference="fs4-oB-rEh"/>
-                                <exclude reference="jZw-m0-phb"/>
-                            </mask>
-                        </variation>
-                    </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HLQ-A8-yJB">
-                        <rect key="frame" x="18" y="78" width="42" height="20.5"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                        <nil key="highlightedColor"/>
-                    </label>
+                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="you-4b-0MJ">
+                        <rect key="frame" x="0.0" y="0.0" width="315" height="99.5"/>
+                    </scrollView>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="NNF-10-lx7" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="Ise-ae-AP8"/>
-                    <constraint firstItem="HLQ-A8-yJB" firstAttribute="top" secondItem="NNF-10-lx7" secondAttribute="bottom" constant="8" id="OlY-hw-I6V"/>
-                    <constraint firstItem="NNF-10-lx7" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="Pdc-Yv-Jq5"/>
-                    <constraint firstItem="HLQ-A8-yJB" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="j0C-w4-sNG"/>
-                    <constraint firstItem="NNF-10-lx7" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="p3A-bN-saI"/>
-                    <constraint firstItem="NNF-10-lx7" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="wef-Pz-Y97"/>
-                    <constraint firstItem="HLQ-A8-yJB" firstAttribute="top" secondItem="NNF-10-lx7" secondAttribute="bottom" constant="8" id="xtf-2t-30a"/>
+                    <constraint firstAttribute="trailing" secondItem="you-4b-0MJ" secondAttribute="trailing" id="0II-2R-GhA"/>
+                    <constraint firstAttribute="bottom" secondItem="you-4b-0MJ" secondAttribute="bottom" id="3zX-mW-XVc"/>
+                    <constraint firstItem="you-4b-0MJ" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="COp-Es-qri"/>
+                    <constraint firstItem="you-4b-0MJ" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="vPT-fp-HBJ"/>
                 </constraints>
-                <variation key="default">
-                    <mask key="constraints">
-                        <exclude reference="Ise-ae-AP8"/>
-                        <exclude reference="Pdc-Yv-Jq5"/>
-                        <exclude reference="OlY-hw-I6V"/>
-                    </mask>
-                </variation>
             </tableViewCellContentView>
-            <point key="canvasLocation" x="128" y="216.5"/>
+            <connections>
+                <outlet property="scrollView" destination="you-4b-0MJ" id="RrB-BE-cqA"/>
+            </connections>
+            <point key="canvasLocation" x="246.5" y="195"/>
         </tableViewCell>
     </objects>
 </document>

@@ -11,8 +11,8 @@
 #import "DGHomeSquareCell.h"
 
 @interface DGrecommendViewController ()<UITableViewDataSource,UITableViewDelegate>
-@property(nonatomic, strong) NSMutableArray *showData;
-@property(nonatomic, strong) NSMutableArray *mainData;
+@property(nonatomic, strong) NSMutableArray *roundData;
+@property(nonatomic, strong) NSMutableArray *squareData;
 
 @property(nonatomic, strong) UIActivityIndicatorView *acview;
 
@@ -28,6 +28,7 @@
     
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
+    [self setupTableView];
     
 }
 
@@ -44,8 +45,8 @@
     //其余方形cell
     [self.tableView registerClass:[DGHomeSquareCell class] forCellReuseIdentifier:@"square"];
     
-//    _showData = [[NSMutableArray alloc] init];
-//    _mainData = [[NSMutableArray alloc] init];
+    _roundData = [[NSMutableArray alloc] init];
+    _squareData = [[NSMutableArray alloc] init];
     
     //菊花
 }
@@ -55,12 +56,22 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 1;
+    return 10;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return [[UITableViewCell alloc]init];
+    if (indexPath.section == 0) {//第一组
+        DGHomeRoundCell *cell = [tableView dequeueReusableCellWithIdentifier:@"round"];
+        [cell roundCellWith:_roundData];
+        return cell;
+    }else{
+        DGHomeSquareCell *cell = [tableView dequeueReusableCellWithIdentifier:@"square"];
+        [cell squareCellWith:_squareData[indexPath.section - 1]];
+        return cell;
+    }
+    
+    
 }
 /*
 #pragma mark - Navigation

@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface DGHomeSquareCell : UITableViewCell
+- (void)squareCellWith:(NSArray *)arry;
 
 @end

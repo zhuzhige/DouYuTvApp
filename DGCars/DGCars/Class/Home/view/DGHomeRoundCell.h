@@ -10,4 +10,6 @@
 
 @interface DGHomeRoundCell : UITableViewCell
 
+- (void)roundCellWith:(NSArray *)arry;
+
 @end

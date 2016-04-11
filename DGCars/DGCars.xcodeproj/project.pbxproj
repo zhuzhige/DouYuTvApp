@@ -31,6 +31,7 @@
 		0D5638A91CB9152F00BB23F4 /* DGLiveController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0D5638931CB9152F00BB23F4 /* DGLiveController.xib */; };
 		0D5638AA1CB9152F00BB23F4 /* DGMeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D5638991CB9152F00BB23F4 /* DGMeController.m */; };
 		0D5638AB1CB9152F00BB23F4 /* DGMeController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0D56389A1CB9152F00BB23F4 /* DGMeController.xib */; };
+		0D8B15D61CBBDE06001D9AD5 /* DGHomeRoundModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D8B15D51CBBDE06001D9AD5 /* DGHomeRoundModel.m */; };
 		0DED9CAA1CB5C989002EA021 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DED9CA91CB5C989002EA021 /* main.m */; };
 		0DED9CB31CB5C989002EA021 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0DED9CB11CB5C989002EA021 /* Main.storyboard */; };
 		0DED9CB51CB5C989002EA021 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0DED9CB41CB5C989002EA021 /* Assets.xcassets */; };
@@ -102,6 +103,8 @@
 		0D5638981CB9152F00BB23F4 /* DGMeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DGMeController.h; sourceTree = "<group>"; };
 		0D5638991CB9152F00BB23F4 /* DGMeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DGMeController.m; sourceTree = "<group>"; };
 		0D56389A1CB9152F00BB23F4 /* DGMeController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DGMeController.xib; sourceTree = "<group>"; };
+		0D8B15D41CBBDE06001D9AD5 /* DGHomeRoundModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DGHomeRoundModel.h; sourceTree = "<group>"; };
+		0D8B15D51CBBDE06001D9AD5 /* DGHomeRoundModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DGHomeRoundModel.m; sourceTree = "<group>"; };
 		0DED9CA51CB5C989002EA021 /* DGCars.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DGCars.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0DED9CA91CB5C989002EA021 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		0DED9CB21CB5C989002EA021 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -257,6 +260,8 @@
 		0D5638871CB9152F00BB23F4 /* model */ = {
 			isa = PBXGroup;
 			children = (
+				0D8B15D41CBBDE06001D9AD5 /* DGHomeRoundModel.h */,
+				0D8B15D51CBBDE06001D9AD5 /* DGHomeRoundModel.m */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -636,6 +641,7 @@
 				0D5638701CB914F100BB23F4 /* DGSocks.m in Sources */,
 				0D5638A11CB9152F00BB23F4 /* DGHomeController.m in Sources */,
 				0D5638621CB914BB00BB23F4 /* NSString+Hash.m in Sources */,
+				0D8B15D61CBBDE06001D9AD5 /* DGHomeRoundModel.m in Sources */,
 				0D5638631CB914BB00BB23F4 /* UIBarButtonItem+HKExtension.m in Sources */,
 				0D5638A81CB9152F00BB23F4 /* DGLiveController.m in Sources */,
 				0D5638A41CB9152F00BB23F4 /* DGHomeRoundCell.m in Sources */,
