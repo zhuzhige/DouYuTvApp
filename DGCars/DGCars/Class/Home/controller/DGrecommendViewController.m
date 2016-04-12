@@ -14,9 +14,6 @@
 @property(nonatomic, strong) NSMutableArray *roundData;
 @property(nonatomic, strong) NSMutableArray *squareData;
 
-@property(nonatomic, strong) UIActivityIndicatorView *acview;
-
-
 @end
 
 @implementation DGrecommendViewController
@@ -44,9 +41,9 @@
     [self.tableView registerClass:[DGHomeRoundCell class] forCellReuseIdentifier:@"round"];
     //其余方形cell
     [self.tableView registerClass:[DGHomeSquareCell class] forCellReuseIdentifier:@"square"];
-    
-    _roundData = [[NSMutableArray alloc] init];
-    _squareData = [[NSMutableArray alloc] init];
+//    
+//    _roundData = [[NSMutableArray alloc] init];
+//    _squareData = [[NSMutableArray alloc] init];
     
     //菊花
 }

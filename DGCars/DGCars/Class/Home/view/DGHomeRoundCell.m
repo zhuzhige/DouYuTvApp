@@ -40,7 +40,7 @@
     _scrollView.contentSize = CGSizeMake(125 * arry.count+5, 105);
     
     for (DGHomeRoundModel *model in arry) {
-        
+        //依次创建小模块
     }
     
 //    for (NSInteger i = 0; i <arry.count; i++) {
