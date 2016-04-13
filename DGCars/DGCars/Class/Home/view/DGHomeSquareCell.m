@@ -7,6 +7,15 @@
 //
 
 #import "DGHomeSquareCell.h"
+#import "DGHomeLiveViewCell.h"
+
+@interface DGHomeSquareCell()<UICollectionViewDelegate,UICollectionViewDataSource>
+
+@property(nonatomic,weak) UICollectionView *collectionView;
+@property(nonatomic,strong) NSMutableArray *data;
+
+
+@end
 
 @implementation DGHomeSquareCell
 
@@ -22,7 +31,7 @@
 
 - (void)squareCellWith:(NSArray *)arry
 {
-
+    
 }
 
 - (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier{
@@ -30,8 +39,47 @@
     if (self) {
         //取消单元格选中效果
         self.selectionStyle = UITableViewCellSelectionStyleNone;
+        [self initCollectionView];
     }
     return self;
+}
+
+- (void)initCollectionView
+{
+    CGFloat width = [UIScreen mainScreen].bounds.size.width;
+    CGFloat height = 280 *[UIScreen mainScreen].bounds.size.width/375.0f;
+    
+    UICollectionViewFlowLayout *laout = [[UICollectionViewFlowLayout alloc] init];
+    laout.itemSize = CGSizeMake((width-15)/2, (height-15)/2);
+    laout.minimumInteritemSpacing = 5;
+    laout.minimumLineSpacing = 5;
+    laout.sectionInset = UIEdgeInsetsMake(5, 5, 5, 5);
+    
+    UICollectionView *collectionView = [[UICollectionView alloc] initWithFrame:CGRectMake(0, 0, width, height) collectionViewLayout:laout];
+    collectionView.dataSource = self;
+    collectionView.delegate = self;
+    collectionView.backgroundColor = RGBCOLOR(226, 226, 226);
+    collectionView.scrollEnabled = NO;
+    [collectionView registerClass:[DGHomeLiveViewCell class] forCellWithReuseIdentifier:@"homeLive"];
+    
+    _collectionView = collectionView;
+    
+    [self addSubview:_collectionView];
+    
+}
+
+- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
+{
+    return 1;
+}
+
+- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    DGHomeLiveViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"homeLive" forIndexPath:indexPath];
+    
+    cell.model = _data[indexPath.row];
+    
+    return cell;
 }
 
 @end

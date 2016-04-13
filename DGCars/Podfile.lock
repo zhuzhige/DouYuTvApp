@@ -1,4 +1,19 @@
 PODS:
+  - AFNetworking (3.1.0):
+    - AFNetworking/NSURLSession (= 3.1.0)
+    - AFNetworking/Reachability (= 3.1.0)
+    - AFNetworking/Security (= 3.1.0)
+    - AFNetworking/Serialization (= 3.1.0)
+    - AFNetworking/UIKit (= 3.1.0)
+  - AFNetworking/NSURLSession (3.1.0):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (3.1.0)
+  - AFNetworking/Security (3.1.0)
+  - AFNetworking/Serialization (3.1.0)
+  - AFNetworking/UIKit (3.1.0):
+    - AFNetworking/NSURLSession
   - CocoaAsyncSocket (7.4.3):
     - CocoaAsyncSocket/All (= 7.4.3)
   - CocoaAsyncSocket/All (7.4.3):
@@ -7,13 +22,30 @@ PODS:
   - CocoaAsyncSocket/GCD (7.4.3)
   - CocoaAsyncSocket/RunLoop (7.4.3)
   - MJExtension (3.0.10)
+  - MJRefresh (3.1.0)
+  - SDAutoLayout (1.50)
+  - SDCycleScrollView (1.62):
+    - SDWebImage (~> 3.7)
+  - SDWebImage (3.7.5):
+    - SDWebImage/Core (= 3.7.5)
+  - SDWebImage/Core (3.7.5)
 
 DEPENDENCIES:
+  - AFNetworking
   - CocoaAsyncSocket
   - MJExtension
+  - MJRefresh
+  - SDAutoLayout
+  - SDCycleScrollView
+  - SDWebImage
 
 SPEC CHECKSUMS:
+  AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
   CocoaAsyncSocket: a18c75dca4b08723628a0bacca6e94803d90be91
   MJExtension: d86aacb740c87519d20e3cca55b6fa4be6cc7548
+  MJRefresh: 743e6404967d1c2c688472ea3ecfde247d872db4
+  SDAutoLayout: 88b539a0c6204787d8e4084ef1b0db250241cc47
+  SDCycleScrollView: ae016cb4cc4036523917f146ede6f7b11d408f6a
+  SDWebImage: 69c6303e3348fba97e03f65d65d4fbc26740f461
 
 COCOAPODS: 0.39.0

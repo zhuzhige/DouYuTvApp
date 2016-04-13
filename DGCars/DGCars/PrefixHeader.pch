@@ -1,0 +1,44 @@
+//
+//  PrefixHeader.pch
+//  DGCars
+//
+//  Created by 米 on 16/4/13.
+//  Copyright © 2016年 米. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+#import <MJExtension.h>
+#import <UIView+SDAutoLayout.h>
+
+//推荐秀
+#define kDGRoundUrl @"http://www.douyutv.com/api/v1/getCyclePicture?aid=android&client_sys=ios"
+//滚动视图
+#define kDGHeadViewUrl @"http://www.douyutv.com/api/v1/slide/6?aid=android&client_sys=ios"
+
+//主要内容
+#define kMainUrl @"http://www.douyutv.com/api/v1/channel?aid=android&client_sys=ios"
+
+
+//栏目界面接口
+#define kColumnUrl @"http://www.douyutv.com/api/v1/game?aid=android&client_sys=ios"
+
+//直播界面(传入参数下拉加载)
+#define kTVUrl @"http://www.douyutv.com/api/v1/live?aid=android&client_sys=ios&limit=20&offset=%ld"
+
+//更多专区
+#define kMoreUrl @"http://www.douyutv.com/api/v1/live/%@?aid=android&client_sys=android&limit=20&offset=%ld"
+
+//推荐点击（tag_id分界面类型）
+#define kRoomUrl @"http://www.douyutv.com/api/v1/getTagRoomList?aid=android&client_sys=andorid&tag_id=%@&limit=20&offset=%ld"
+
+
+
+//颜色转换
+#define RGBCOLOR(r,g,b) [UIColor colorWithRed:(r)/255.0f green:(g)/255.0f blue:(b)/255.0f alpha:1]
+#define RGBACOLOR(r,g,b,a) [UIColor colorWithRed:(r)/255.0f green:(g)/255.0f blue:(b)/255.0f alpha:(a)]
+
+#endif /* PrefixHeader_pch */

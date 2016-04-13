@@ -8,6 +8,7 @@
 
 #import "DGHomeRoundCell.h"
 #import "DGHomeRoundModel.h"
+#import "DGRoundView.h"
 
 //颜色转换
 #define RGBCOLOR(r,g,b) [UIColor colorWithRed:(r)/255.0f green:(g)/255.0f blue:(b)/255.0f alpha:1]
@@ -39,8 +40,16 @@
     
     _scrollView.contentSize = CGSizeMake(125 * arry.count+5, 105);
     
-    for (DGHomeRoundModel *model in arry) {
+    for (NSInteger i = 0; i <arry.count; i++) {
+        
         //依次创建小模块
+        DGHomeRoundModel *model = arry[i];
+        CGRect frame = CGRectMake((i+1)*5+i*120, 5, 120, 100);
+        DGRoundView * roundVc = [[DGRoundView alloc]initWithFrame:frame];
+        roundVc.model = model;
+        [_scrollView addSubview:roundVc];
+        
+        
     }
     
 //    for (NSInteger i = 0; i <arry.count; i++) {

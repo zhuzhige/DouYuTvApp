@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9532" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DGRoundView"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="z1r-yz-OVD" customClass="DGRoundView">
+            <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="eqN-Xe-NtQ">
+                    <rect key="frame" x="20" y="0.0" width="60" height="60"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="60" id="VIL-rb-70g"/>
+                        <constraint firstAttribute="height" constant="60" id="Y7A-RK-dOE"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0fc-o1-5Pj">
+                    <rect key="frame" x="0.0" y="70" width="100" height="20.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="0fc-o1-5Pj" firstAttribute="top" secondItem="eqN-Xe-NtQ" secondAttribute="bottom" constant="10" id="8hC-Kw-7nV"/>
+                <constraint firstItem="0fc-o1-5Pj" firstAttribute="centerX" secondItem="z1r-yz-OVD" secondAttribute="centerX" id="MXG-Jn-UTB"/>
+                <constraint firstItem="0fc-o1-5Pj" firstAttribute="leading" secondItem="z1r-yz-OVD" secondAttribute="leading" id="Qgp-ix-yrf"/>
+                <constraint firstItem="eqN-Xe-NtQ" firstAttribute="centerX" secondItem="z1r-yz-OVD" secondAttribute="centerX" id="Tyy-qI-MET"/>
+                <constraint firstAttribute="trailing" secondItem="0fc-o1-5Pj" secondAttribute="trailing" id="vjo-To-u3x"/>
+                <constraint firstItem="eqN-Xe-NtQ" firstAttribute="top" secondItem="z1r-yz-OVD" secondAttribute="top" id="ywM-aW-u1B"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="iconView" destination="eqN-Xe-NtQ" id="2m0-4B-T5N"/>
+                <outlet property="nameLabel" destination="0fc-o1-5Pj" id="7jk-dL-zvi"/>
+            </connections>
+            <point key="canvasLocation" x="105" y="7"/>
+        </view>
+    </objects>
+</document>

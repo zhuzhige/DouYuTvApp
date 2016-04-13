@@ -7,6 +7,11 @@ source 'https://github.com/CocoaPods/Specs.git'
 target 'DGCars' do
     pod 'CocoaAsyncSocket'
     pod 'MJExtension'
+    pod 'SDWebImage'
+    pod 'MJRefresh'
+    pod 'AFNetworking'
+    pod 'SDCycleScrollView'
+    pod 'SDAutoLayout'
 end
 
 target 'DGCarsTests' do

@@ -32,4 +32,18 @@
 
 @property (nonatomic, copy) NSString *related_id;
 
+/*
+ admin = tangyi;
+ ctime = 1435646550;
+ id = 12;
+ "mobile_switch" = 1;
+ name = "\U5fa1\U5b85\U8fbe\U4eba";
+ "push_android" = 1;
+ "push_ios" = 1;
+ "related_id" = "";
+ sort = 0;
+ status = 0;
+ url =
+ */
+
 @end
