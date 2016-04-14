@@ -38,6 +38,9 @@
 		0D8B15E71CBE2A3D001D9AD5 /* DGRoomModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D8B15E61CBE2A3D001D9AD5 /* DGRoomModel.m */; };
 		0D8B15EB1CBE3B0A001D9AD5 /* DGHomeLiveViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D8B15E91CBE3B0A001D9AD5 /* DGHomeLiveViewCell.m */; };
 		0D8B15EC1CBE3B0A001D9AD5 /* DGHomeLiveViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0D8B15EA1CBE3B0A001D9AD5 /* DGHomeLiveViewCell.xib */; };
+		0D9AC4301CBF8F220080624F /* DGHomeSquareItemModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D9AC42F1CBF8F220080624F /* DGHomeSquareItemModel.m */; };
+		0D9AC4331CBF8FBD0080624F /* DGHomeSquareRoomModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D9AC4321CBF8FBD0080624F /* DGHomeSquareRoomModel.m */; };
+		0D9AC4361CBF9AF30080624F /* DGHomeRoundItemModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D9AC4351CBF9AF30080624F /* DGHomeRoundItemModel.m */; };
 		0DED9CAA1CB5C989002EA021 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DED9CA91CB5C989002EA021 /* main.m */; };
 		0DED9CB31CB5C989002EA021 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0DED9CB11CB5C989002EA021 /* Main.storyboard */; };
 		0DED9CB51CB5C989002EA021 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0DED9CB41CB5C989002EA021 /* Assets.xcassets */; };
@@ -122,6 +125,12 @@
 		0D8B15E81CBE3B0A001D9AD5 /* DGHomeLiveViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DGHomeLiveViewCell.h; sourceTree = "<group>"; };
 		0D8B15E91CBE3B0A001D9AD5 /* DGHomeLiveViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DGHomeLiveViewCell.m; sourceTree = "<group>"; };
 		0D8B15EA1CBE3B0A001D9AD5 /* DGHomeLiveViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DGHomeLiveViewCell.xib; sourceTree = "<group>"; };
+		0D9AC42E1CBF8F220080624F /* DGHomeSquareItemModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DGHomeSquareItemModel.h; sourceTree = "<group>"; };
+		0D9AC42F1CBF8F220080624F /* DGHomeSquareItemModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DGHomeSquareItemModel.m; sourceTree = "<group>"; };
+		0D9AC4311CBF8FBD0080624F /* DGHomeSquareRoomModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DGHomeSquareRoomModel.h; sourceTree = "<group>"; };
+		0D9AC4321CBF8FBD0080624F /* DGHomeSquareRoomModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DGHomeSquareRoomModel.m; sourceTree = "<group>"; };
+		0D9AC4341CBF9AF30080624F /* DGHomeRoundItemModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DGHomeRoundItemModel.h; sourceTree = "<group>"; };
+		0D9AC4351CBF9AF30080624F /* DGHomeRoundItemModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DGHomeRoundItemModel.m; sourceTree = "<group>"; };
 		0DED9CA51CB5C989002EA021 /* DGCars.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DGCars.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0DED9CA91CB5C989002EA021 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		0DED9CB21CB5C989002EA021 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -277,12 +286,8 @@
 		0D5638871CB9152F00BB23F4 /* model */ = {
 			isa = PBXGroup;
 			children = (
-				0D8B15D41CBBDE06001D9AD5 /* DGHomeRoundModel.h */,
-				0D8B15D51CBBDE06001D9AD5 /* DGHomeRoundModel.m */,
-				0D8B15E21CBE2900001D9AD5 /* DGHeadItemModel.h */,
-				0D8B15E31CBE2900001D9AD5 /* DGHeadItemModel.m */,
-				0D8B15E51CBE2A3D001D9AD5 /* DGRoomModel.h */,
-				0D8B15E61CBE2A3D001D9AD5 /* DGRoomModel.m */,
+				0D9AC4371CBF9DE60080624F /* 首页圆形推荐部分模型 */,
+				0D9AC4381CBF9E170080624F /* 首页方形推荐部分模型 */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -384,6 +389,32 @@
 				0D8B15DC1CBDCB78001D9AD5 /* PrefixHeader.pch */,
 			);
 			name = Other;
+			sourceTree = "<group>";
+		};
+		0D9AC4371CBF9DE60080624F /* 首页圆形推荐部分模型 */ = {
+			isa = PBXGroup;
+			children = (
+				0D8B15D41CBBDE06001D9AD5 /* DGHomeRoundModel.h */,
+				0D8B15D51CBBDE06001D9AD5 /* DGHomeRoundModel.m */,
+				0D8B15E51CBE2A3D001D9AD5 /* DGRoomModel.h */,
+				0D8B15E61CBE2A3D001D9AD5 /* DGRoomModel.m */,
+				0D9AC4341CBF9AF30080624F /* DGHomeRoundItemModel.h */,
+				0D9AC4351CBF9AF30080624F /* DGHomeRoundItemModel.m */,
+			);
+			name = "首页圆形推荐部分模型";
+			sourceTree = "<group>";
+		};
+		0D9AC4381CBF9E170080624F /* 首页方形推荐部分模型 */ = {
+			isa = PBXGroup;
+			children = (
+				0D8B15E21CBE2900001D9AD5 /* DGHeadItemModel.h */,
+				0D8B15E31CBE2900001D9AD5 /* DGHeadItemModel.m */,
+				0D9AC42E1CBF8F220080624F /* DGHomeSquareItemModel.h */,
+				0D9AC42F1CBF8F220080624F /* DGHomeSquareItemModel.m */,
+				0D9AC4311CBF8FBD0080624F /* DGHomeSquareRoomModel.h */,
+				0D9AC4321CBF8FBD0080624F /* DGHomeSquareRoomModel.m */,
+			);
+			name = "首页方形推荐部分模型";
 			sourceTree = "<group>";
 		};
 		0DED9C9C1CB5C989002EA021 = {
@@ -663,6 +694,7 @@
 				0D8B15E71CBE2A3D001D9AD5 /* DGRoomModel.m in Sources */,
 				0D5637DF1CB9124700BB23F4 /* AppDelegate.m in Sources */,
 				0D56389D1CB9152F00BB23F4 /* DGFocusController.m in Sources */,
+				0D9AC4331CBF8FBD0080624F /* DGHomeSquareRoomModel.m in Sources */,
 				0D8B15E41CBE2900001D9AD5 /* DGHeadItemModel.m in Sources */,
 				0D8B15EB1CBE3B0A001D9AD5 /* DGHomeLiveViewCell.m in Sources */,
 				0D5638A21CB9152F00BB23F4 /* DGrecommendViewController.m in Sources */,
@@ -679,11 +711,13 @@
 				0D5638A81CB9152F00BB23F4 /* DGLiveController.m in Sources */,
 				0D5638A41CB9152F00BB23F4 /* DGHomeRoundCell.m in Sources */,
 				0D5638641CB914BB00BB23F4 /* UIView+HKExtension.m in Sources */,
+				0D9AC4361CBF9AF30080624F /* DGHomeRoundItemModel.m in Sources */,
 				0D5638AA1CB9152F00BB23F4 /* DGMeController.m in Sources */,
 				0D5638721CB914F100BB23F4 /* chatmsgModel.m in Sources */,
 				0DED9CAA1CB5C989002EA021 /* main.m in Sources */,
 				0D8B15D91CBDC2F6001D9AD5 /* DGRoundView.m in Sources */,
 				0D5637E21CB9128A00BB23F4 /* DGTabBarController.m in Sources */,
+				0D9AC4301CBF8F220080624F /* DGHomeSquareItemModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

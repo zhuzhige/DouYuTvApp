@@ -11,6 +11,9 @@
 #import "DGHomeSquareCell.h"
 #import "DGHomeRoundModel.h"
 #import "DGHeadItemModel.h"
+#import "DGHomeRoundItemModel.h"
+#import "DGHomeSquareRoomModel.h"
+#import "DGHomeSquareItemModel.h"
 #import <AFNetworking.h>
 #import <SDCycleScrollView.h>
 #import <MJRefresh.h>
@@ -37,15 +40,8 @@
     [self setupTableView];
     [self setupHeadView];
     [self setupRefresh];
-    
-    AFHTTPSessionManager *mgr = [AFHTTPSessionManager manager];
-    [mgr GET:kMainUrl parameters:nil progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-        NSLog(@"%@",responseObject);
-        
-    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-        
-    }];
-    
+    [self loadSquareData];
+    [self loadRoundData];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -75,9 +71,7 @@
     self.tableView.tableHeaderView = headerView;
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
     AFHTTPSessionManager * mgr = [AFHTTPSessionManager manager];
-    [mgr GET:kDGHeadViewUrl parameters:nil progress:^(NSProgress * _Nonnull uploadProgress) {
-        
-    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+    [mgr GET:kDGHeadViewUrl parameters:nil progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         _headData = [DGHeadItemModel mj_objectArrayWithKeyValuesArray:responseObject[@"data"]];
         NSMutableArray *imageURLarray = [NSMutableArray array];
         NSMutableArray *titleArray = [NSMutableArray array];
@@ -107,21 +101,35 @@
 
 }
 
-
-- (void)loadRoundData
+- (void) loadRoundData
 {
-    AFHTTPSessionManager * mgr = [AFHTTPSessionManager manager];
-    [mgr POST:kDGRoundUrl parameters:nil progress:^(NSProgress * _Nonnull uploadProgress) {
-    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-
-        _roundData = [DGHomeRoundModel mj_objectArrayWithKeyValuesArray:responseObject[@"data"][@"result"]];
-        [self.tableView reloadSections:[NSIndexSet indexSetWithIndex:0] withRowAnimation:UITableViewRowAnimationAutomatic];
-
+    AFHTTPSessionManager *mgr = [AFHTTPSessionManager manager];
+    [mgr GET:kDGRoundUrl parameters:nil progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        
+        _roundData = [DGHomeRoundItemModel mj_objectArrayWithKeyValuesArray:responseObject[@"data"]];
+        //        DGHomeSquareItemModel *mod = _squareData[1];
+        //        DGHomeSquareRoomModel *room = mod.roomlist[1];
+        //刷新cell
+        
+        NSLog(@"_roundData %ld",_roundData.count);
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-        NSLog(@"%@",error);
+        
     }];
-    
+}
 
+- (void) loadSquareData
+{
+    AFHTTPSessionManager *mgr = [AFHTTPSessionManager manager];
+    [mgr GET:kMainUrl parameters:nil progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        _squareData = [DGHomeSquareItemModel mj_objectArrayWithKeyValuesArray:responseObject[@"data"]];
+        //        DGHomeSquareItemModel *mod = _squareData[1];
+        //        DGHomeSquareRoomModel *room = mod.roomlist[1];
+        //刷新cell
+        
+        NSLog(@"_squareData %ld",_squareData.count);
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        
+    }];
 }
 
 #pragma mark <UITableViewDataSource>
@@ -131,29 +139,19 @@
     return 1;
 }
 
-- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    
-    if (indexPath.section == 0) {
-        return 110;
-    }
-    return 280 *[UIScreen mainScreen].bounds.size.width;
-    
-    
-}
-
-
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    if (indexPath.section == 0) {//第一组
-        DGHomeRoundCell *cell = [tableView dequeueReusableCellWithIdentifier:@"round"];
-        [cell roundCellWith:_roundData];
-        return cell;
-    }else{
-        DGHomeSquareCell *cell = [tableView dequeueReusableCellWithIdentifier:@"square"];
-        [cell squareCellWith:_squareData[indexPath.section - 1]];
-        return cell;
-    }
+    
+    return [[UITableViewCell alloc]init];
+//    if (indexPath.section == 0) {//第一组
+//        DGHomeRoundCell *cell = [tableView dequeueReusableCellWithIdentifier:@"round"];
+//        [cell roundCellWith:_roundData];
+//        return cell;
+//    }else{
+//        DGHomeSquareCell *cell = [tableView dequeueReusableCellWithIdentifier:@"square"];
+////        [cell squareCellWith:_squareData[indexPath.section - 1]];
+//        return cell;
+//    }
     
     
 }
