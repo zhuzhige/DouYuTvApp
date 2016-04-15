@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+@class DGHomeSquareItemModel;
 
 @interface DGHomeSquareCell : UITableViewCell
-- (void)squareCellWith:(NSArray *)arry;
+- (void)squareCellWith:(DGHomeSquareItemModel *)model;
 
 @end

@@ -13,8 +13,11 @@
 
 @property (nonatomic, assign) BOOL isNew;
 
-@property (nonatomic, strong) NSArray<DGHomeRoundModel *> *result;
+@property (nonatomic, strong) NSMutableArray *result;
 
+- (instancetype)initWithDict:(NSDictionary *)dict;
+
++ (instancetype)itemWithDict:(NSDictionary *)dict;
 
 @end
 

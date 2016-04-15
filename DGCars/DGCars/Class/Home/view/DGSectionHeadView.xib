@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9532" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DGSectionHeadView"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="Dfu-Qh-1tH" customClass="DGSectionHeadView">
+            <rect key="frame" x="0.0" y="0.0" width="340" height="39"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="BDY-h2-edp">
+                    <rect key="frame" x="3" y="3" width="8" height="33"/>
+                    <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="8" id="7d4-g7-fm6"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tHg-6J-nhW">
+                    <rect key="frame" x="21" y="9" width="42" height="20.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="右灰" translatesAutoresizingMaskIntoConstraints="NO" id="xOW-5t-4p2">
+                    <rect key="frame" x="308" y="8.5" width="22" height="22"/>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="更多" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jwh-EU-7QZ">
+                    <rect key="frame" x="282" y="11.5" width="26" height="16"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BmP-Px-t9z">
+                    <rect key="frame" x="280" y="0.0" width="50" height="39"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="50" id="EVm-cu-hlJ"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <state key="normal">
+                        <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="moreClick:" destination="-1" eventType="touchUpInside" id="2to-u8-Bu5"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="jwh-EU-7QZ" firstAttribute="top" secondItem="Dfu-Qh-1tH" secondAttribute="top" id="5DI-Bd-jDj"/>
+                <constraint firstItem="BmP-Px-t9z" firstAttribute="top" secondItem="Dfu-Qh-1tH" secondAttribute="top" id="8Eu-0f-wIh"/>
+                <constraint firstItem="BDY-h2-edp" firstAttribute="top" secondItem="Dfu-Qh-1tH" secondAttribute="top" constant="3" id="EgL-Su-0VU"/>
+                <constraint firstAttribute="bottom" secondItem="xOW-5t-4p2" secondAttribute="bottom" id="NuL-FJ-YrH"/>
+                <constraint firstItem="BDY-h2-edp" firstAttribute="leading" secondItem="Dfu-Qh-1tH" secondAttribute="leading" constant="3" id="P5y-WX-A3T"/>
+                <constraint firstAttribute="bottom" secondItem="jwh-EU-7QZ" secondAttribute="bottom" id="R9H-fJ-yR2"/>
+                <constraint firstAttribute="bottom" secondItem="BmP-Px-t9z" secondAttribute="bottom" id="RcR-4O-qQQ"/>
+                <constraint firstItem="tHg-6J-nhW" firstAttribute="leading" secondItem="BDY-h2-edp" secondAttribute="trailing" constant="10" id="SXx-ID-7Tu"/>
+                <constraint firstItem="xOW-5t-4p2" firstAttribute="centerY" secondItem="Dfu-Qh-1tH" secondAttribute="centerY" id="V70-X0-Tq9"/>
+                <constraint firstAttribute="bottom" secondItem="BDY-h2-edp" secondAttribute="bottom" constant="3" id="VWk-ZS-Ihe"/>
+                <constraint firstItem="tHg-6J-nhW" firstAttribute="leading" secondItem="BDY-h2-edp" secondAttribute="trailing" constant="10" id="cBr-Pr-RRd"/>
+                <constraint firstAttribute="trailing" secondItem="xOW-5t-4p2" secondAttribute="trailing" constant="10" id="cm0-em-C8u"/>
+                <constraint firstItem="jwh-EU-7QZ" firstAttribute="centerY" secondItem="Dfu-Qh-1tH" secondAttribute="centerY" id="fgM-oU-0vH"/>
+                <constraint firstItem="xOW-5t-4p2" firstAttribute="top" secondItem="Dfu-Qh-1tH" secondAttribute="top" id="nWk-LS-bCp"/>
+                <constraint firstItem="tHg-6J-nhW" firstAttribute="centerY" secondItem="Dfu-Qh-1tH" secondAttribute="centerY" id="r6E-Na-W63"/>
+                <constraint firstItem="xOW-5t-4p2" firstAttribute="leading" secondItem="jwh-EU-7QZ" secondAttribute="trailing" id="rCB-dH-usa"/>
+                <constraint firstItem="BmP-Px-t9z" firstAttribute="top" secondItem="Dfu-Qh-1tH" secondAttribute="top" id="tbO-CZ-I47"/>
+                <constraint firstAttribute="trailing" secondItem="BmP-Px-t9z" secondAttribute="trailing" constant="10" id="vIc-RP-xdT"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="8Eu-0f-wIh"/>
+                    <exclude reference="5DI-Bd-jDj"/>
+                    <exclude reference="R9H-fJ-yR2"/>
+                    <exclude reference="NuL-FJ-YrH"/>
+                    <exclude reference="nWk-LS-bCp"/>
+                </mask>
+            </variation>
+            <connections>
+                <outlet property="leftImage" destination="BDY-h2-edp" id="unR-Ul-DOo"/>
+                <outlet property="moreButton" destination="BmP-Px-t9z" id="o60-VN-kg7"/>
+                <outlet property="titleLable" destination="tHg-6J-nhW" id="y0J-No-EdE"/>
+            </connections>
+            <point key="canvasLocation" x="-75" y="-180.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="右灰" width="22" height="22"/>
+    </resources>
+</document>

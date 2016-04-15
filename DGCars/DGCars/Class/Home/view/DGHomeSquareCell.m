@@ -8,6 +8,7 @@
 
 #import "DGHomeSquareCell.h"
 #import "DGHomeLiveViewCell.h"
+#import "DGHomeSquareItemModel.h"
 
 @interface DGHomeSquareCell()<UICollectionViewDelegate,UICollectionViewDataSource>
 
@@ -29,9 +30,10 @@
     // Configure the view for the selected state
 }
 
-- (void)squareCellWith:(NSArray *)arry
+- (void)squareCellWith:(DGHomeSquareItemModel *)model
 {
-    
+    _data = model.roomlist;
+    [_collectionView reloadData];
 }
 
 - (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier{
@@ -58,7 +60,7 @@
     UICollectionView *collectionView = [[UICollectionView alloc] initWithFrame:CGRectMake(0, 0, width, height) collectionViewLayout:laout];
     collectionView.dataSource = self;
     collectionView.delegate = self;
-    collectionView.backgroundColor = RGBCOLOR(226, 226, 226);
+    collectionView.backgroundColor = [UIColor whiteColor];
     collectionView.scrollEnabled = NO;
     [collectionView registerClass:[DGHomeLiveViewCell class] forCellWithReuseIdentifier:@"homeLive"];
     
@@ -70,7 +72,8 @@
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
-    return 1;
+    NSLog(@"%ld",_data.count);
+    return _data.count;
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath

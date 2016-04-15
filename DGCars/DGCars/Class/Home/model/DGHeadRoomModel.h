@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface DGRoomModel : NSObject
+@interface DGHeadRoomModel : NSObject
 
 @property (nonatomic, copy) NSString *cate_id;
 

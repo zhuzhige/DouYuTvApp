@@ -7,10 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
-@class DGRoomModel;
+@class DGHomeSquareRoomModel;
 
 @interface DGHomeLiveViewCell : UICollectionViewCell
 
-@property(nonatomic,strong) DGRoomModel *model;
+@property(nonatomic,strong) DGHomeSquareRoomModel *model;
 
 @end

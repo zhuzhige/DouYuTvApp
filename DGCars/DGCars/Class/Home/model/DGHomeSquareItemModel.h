@@ -15,9 +15,11 @@
 
 @property (nonatomic, copy) NSString *cate_id;
 
-@property (nonatomic, strong) NSArray<DGHomeSquareRoomModel *> *roomlist;
+@property (nonatomic, strong) NSMutableArray *roomlist;
 
+- (instancetype)initWithDict:(NSDictionary *)dict;
 
++ (instancetype)itemWithDict:(NSDictionary *)dict;
 @end
 
 /*

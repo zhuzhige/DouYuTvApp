@@ -44,6 +44,8 @@
 
 @property (nonatomic, copy) NSString *vod_quality;
 
+- (instancetype)initWithDict:(NSDictionary *)dict;
++ (instancetype)roomWithDict:(NSDictionary *)dict;
 
 
 @end

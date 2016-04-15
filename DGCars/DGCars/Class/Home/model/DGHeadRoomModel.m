@@ -6,8 +6,8 @@
 //  Copyright © 2016年 米. All rights reserved.
 //
 
-#import "DGRoomModel.h"
+#import "DGHeadRoomModel.h"
 
-@implementation DGRoomModel
+@implementation DGHeadRoomModel
 
 @end

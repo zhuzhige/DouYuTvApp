@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "DGRoomModel.h"
+@class DGHeadRoomModel;
 
 @interface DGHeadItemModel : NSObject
 
@@ -17,7 +17,7 @@
 
 @property (nonatomic, copy) NSString *title;
 
-@property (nonatomic, strong) DGRoomModel *room;
+@property (nonatomic, strong) DGHeadRoomModel *room;
 
 
 

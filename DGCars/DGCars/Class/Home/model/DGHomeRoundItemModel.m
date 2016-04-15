@@ -10,4 +10,16 @@
 
 @implementation DGHomeRoundItemModel
 
+- (instancetype)initWithDict:(NSDictionary *)dict
+{
+    if (self = [super init]) {
+        [self mj_setKeyValues:dict];
+    }
+    return self;
+}
++ (instancetype)itemWithDict:(NSDictionary *)dict
+{
+    return [[self alloc]initWithDict:dict];
+}
+
 @end

@@ -32,6 +32,10 @@
 
 @property (nonatomic, copy) NSString *related_id;
 
+- (instancetype)initWithDict:(NSDictionary *)dict;
+
++ (instancetype)roomWithDict:(NSDictionary *)dict;
+
 /*
  admin = tangyi;
  ctime = 1435646550;
