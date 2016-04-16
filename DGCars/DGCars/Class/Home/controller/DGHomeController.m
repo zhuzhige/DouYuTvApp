@@ -191,17 +191,27 @@
 {
 
     NSInteger index = scrollView.contentOffset.x / scrollView.width;
-    
-    UITableViewController *vc = self.childViewControllers[index];
-    vc.view.x = scrollView.contentOffset.x;
-    vc.view.y = 0;
-    vc.view.height = scrollView.height;
-
-    CGFloat bottom = self.tabBarController.tabBar.height;
-    CGFloat top = CGRectGetMaxY(self.titleView.frame);
-    vc.tableView.contentInset = UIEdgeInsetsMake(top, 0, bottom, 0);
 //    vc.tableView.scrollIndicatorInsets = vc.tableView.contentInset;
-    [scrollView addSubview:vc.view];
+    if (index<3) {//tableview
+        UITableViewController *vc = self.childViewControllers[index];
+        vc.view.x = scrollView.contentOffset.x;
+        vc.view.y = 0;
+        vc.view.height = scrollView.height;
+        
+        CGFloat bottom = self.tabBarController.tabBar.height;
+        CGFloat top = CGRectGetMaxY(self.titleView.frame);
+        vc.tableView.contentInset = UIEdgeInsetsMake(top, 0, bottom, 0);
+        [scrollView addSubview:vc.view];
+    }else{
+        UICollectionViewController *vc = self.childViewControllers[3];
+        vc.view.x = scrollView.contentOffset.x;
+        vc.view.y = 0;
+        vc.view.height = scrollView.height;
+        CGFloat bottom = self.tabBarController.tabBar.height;
+        CGFloat top = CGRectGetMaxY(self.titleView.frame);
+        vc.collectionView.contentInset = UIEdgeInsetsMake(top, 0, bottom, 0);
+        [scrollView addSubview:vc.view];
+    }
     
 }
 

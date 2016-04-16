@@ -19,8 +19,22 @@
 
 @implementation DGRoundView
 
+- (instancetype)initWithFrame:(CGRect)frame
+{
+    if (self = [super initWithFrame:frame]) {
+        self = [[NSBundle mainBundle] loadNibNamed:@"DGRoundView" owner:self options:nil].lastObject;
+        self.frame = frame;
+    }
+    return self;
+}
 
-
+- (void)awakeFromNib
+{
+    _iconView.layer.masksToBounds = YES; //没这句话它圆不起来
+    _iconView.layer.cornerRadius = _iconView.bounds.size.width * 0.5;
+    _iconView.layer.borderColor = [UIColor whiteColor].CGColor;
+    
+}
 
 - (void)setModel:(DGHomeRoundModel *)model
 {

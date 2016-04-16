@@ -19,7 +19,7 @@
 #import <SDCycleScrollView.h>
 #import <MJRefresh.h>
 
-@interface DGrecommendViewController ()<UITableViewDataSource,UITableViewDelegate,SDCycleScrollViewDelegate,DGSectionHeadViewDelegate>
+@interface DGrecommendViewController ()<UITableViewDataSource,UITableViewDelegate,SDCycleScrollViewDelegate,DGSectionHeadViewDelegate,DGHomeRoundCellDelegate>
 @property(nonatomic, strong) NSMutableArray *roundData;
 @property(nonatomic, strong) NSMutableArray *squareData;
 @property(nonatomic, strong) NSMutableArray *headData;
@@ -81,6 +81,9 @@
 
 - (void)refresh
 {
+    [self loadHeadData];
+    [self loadSquareData];
+    [self loadRoundData];
     [self.tableView.mj_header endRefreshing];
 
 
@@ -98,10 +101,8 @@
                 [imageURLarray addObject:model.pic_url];
                 [titleArray addObject:model.title];
             }
-//            dispatch_async(dispatch_get_main_queue(), ^{
                 _headerView.imageURLStringsGroup = imageURLarray;
                 _headerView.titlesGroup = titleArray;
-//            });
         } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
             NSLog(@"setupHeadView--error");
         }];
@@ -114,17 +115,16 @@
         AFHTTPSessionManager *mgr = [AFHTTPSessionManager manager];
         [mgr GET:kDGRoundUrl parameters:nil progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
             
-            NSMutableArray *roundItem = [NSMutableArray array];
             DGHomeRoundItemModel * item = [DGHomeRoundItemModel itemWithDict:responseObject[@"data"]];
             NSMutableArray *resultArray = [NSMutableArray array];
             for (NSDictionary *dict in item.result) {
                 DGHomeRoundModel *room = [DGHomeRoundModel roomWithDict:dict];
                 [resultArray addObject:room];
-                item.result = resultArray;
-                [roundItem addObject:item];
             }
-            _roundData = roundItem;
+            _roundData = resultArray;
             //刷新cell
+            [self.tableView reloadData];
+
             
         } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
             
@@ -168,7 +168,6 @@
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
     if (_squareData.count) {
-        NSLog(@"表示图分区%ld",_squareData.count);
         return _squareData.count + 1;
     }
     return 1;
@@ -183,7 +182,8 @@
 {
         if (indexPath.section == 0) {//第一组
             DGHomeRoundCell *cell = [tableView dequeueReusableCellWithIdentifier:@"round"];
-//            [cell roundCellWith:_roundData];
+            [cell roundCellWith:_roundData];
+            cell.delegate = self;
             return cell;
         }else{
     
@@ -236,6 +236,13 @@
     NSLog(@"%@",itemModel);
 }
 
+#pragma mark <DGHomeRoundCellDelegate>
+
+- (void)didClickRoundWithModel:(DGHomeRoundModel *)roundModel
+{
+    NSLog(@"%@",roundModel);
+
+}
 /*
 #pragma mark - Navigation
 

@@ -12,22 +12,21 @@
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="eqN-Xe-NtQ">
-                    <rect key="frame" x="20" y="0.0" width="60" height="60"/>
+                    <rect key="frame" x="15" y="0.0" width="70" height="70"/>
                     <constraints>
-                        <constraint firstAttribute="width" constant="60" id="VIL-rb-70g"/>
-                        <constraint firstAttribute="height" constant="60" id="Y7A-RK-dOE"/>
+                        <constraint firstAttribute="width" constant="70" id="VIL-rb-70g"/>
+                        <constraint firstAttribute="height" constant="70" id="Y7A-RK-dOE"/>
                     </constraints>
                 </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0fc-o1-5Pj">
-                    <rect key="frame" x="0.0" y="70" width="100" height="20.5"/>
+                    <rect key="frame" x="0.0" y="75" width="100" height="20.5"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
             </subviews>
-            <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
-                <constraint firstItem="0fc-o1-5Pj" firstAttribute="top" secondItem="eqN-Xe-NtQ" secondAttribute="bottom" constant="10" id="8hC-Kw-7nV"/>
+                <constraint firstItem="0fc-o1-5Pj" firstAttribute="top" secondItem="eqN-Xe-NtQ" secondAttribute="bottom" constant="5" id="8hC-Kw-7nV"/>
                 <constraint firstItem="0fc-o1-5Pj" firstAttribute="centerX" secondItem="z1r-yz-OVD" secondAttribute="centerX" id="MXG-Jn-UTB"/>
                 <constraint firstItem="0fc-o1-5Pj" firstAttribute="leading" secondItem="z1r-yz-OVD" secondAttribute="leading" id="Qgp-ix-yrf"/>
                 <constraint firstItem="eqN-Xe-NtQ" firstAttribute="centerX" secondItem="z1r-yz-OVD" secondAttribute="centerX" id="Tyy-qI-MET"/>

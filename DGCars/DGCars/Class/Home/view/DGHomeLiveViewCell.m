@@ -77,7 +77,7 @@
         //贴背景图
         UIView *backView = [[UIView alloc] initWithFrame:CGRectMake(0, height * 5 / 6, width, height / 6)];
         backView.backgroundColor = [UIColor blackColor];
-        backView.alpha = 0.6;
+        backView.alpha = 0.7;
         [_imageView addSubview:backView];
         
         _imageView.layer.masksToBounds = YES; //没这句话它圆不起来
@@ -85,10 +85,10 @@
         
         
         //布局直播者名字
-        UILabel *nameLable = [[UILabel alloc] initWithFrame:CGRectMake(0,0, width * 2/ 3, height  / 6)];
+        UILabel *nameLable = [[UILabel alloc] initWithFrame:CGRectMake(5,0, width * 2/ 3, height  / 6)];
         _nameLable = nameLable;
         
-        _nameLable.font = [UIFont systemFontOfSize:10];
+        _nameLable.font = [UIFont systemFontOfSize:13];
         //        _nameLable.adjustsFontSizeToFitWidth = YES;
         _nameLable.textColor = [UIColor whiteColor];
         [backView addSubview:_nameLable];
@@ -109,7 +109,7 @@
                                                                  width / 3 -15,
                                                                  height / 6)];
         _numberLable = numberLable;
-        _numberLable.font = [UIFont systemFontOfSize:10];
+        _numberLable.font = [UIFont systemFontOfSize:12];
         _numberLable.adjustsFontSizeToFitWidth = YES;
         _numberLable.backgroundColor = [UIColor blackColor];
         _numberLable.alpha = 1;

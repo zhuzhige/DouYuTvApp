@@ -7,9 +7,20 @@
 //
 
 #import <UIKit/UIKit.h>
+@class DGHomeRoundModel;
+
+@protocol DGHomeRoundCellDelegate <NSObject>
+
+@optional
+//点击圆形推荐按钮回调
+- (void)didClickRoundWithModel:(DGHomeRoundModel *)roundModel;
+
+@end
 
 @interface DGHomeRoundCell : UITableViewCell
 
-- (void)roundCellWith:(NSArray *)arry;
+@property(nonatomic, weak)id<DGHomeRoundCellDelegate> delegate;
+
+- (void)roundCellWith:(NSMutableArray *)arry;
 
 @end
