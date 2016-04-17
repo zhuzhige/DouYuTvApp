@@ -8,7 +8,43 @@
 
 #import <Foundation/Foundation.h>
 
-@interface DGWonderFulCellModel : NSObject
+@interface DGWonderFulModel : NSObject
+
+@property (nonatomic, copy) NSString *cate_id;
+
+@property (nonatomic, copy) NSString *child_id;
+
+@property (nonatomic, copy) NSString *nickname;
+
+@property (nonatomic, copy) NSString *online;
+
+@property (nonatomic, copy) NSString *owner_uid;
+
+@property (nonatomic, copy) NSString *ranktype;
+
+@property (nonatomic, copy) NSString *room_id;
+
+@property (nonatomic, copy) NSString *room_name;
+
+@property (nonatomic, copy) NSString *room_src;
+
+@property (nonatomic, copy) NSString *show_status;
+
+@property (nonatomic, copy) NSString *show_time;
+
+@property (nonatomic, copy) NSString *specific_catalog;
+
+@property (nonatomic, copy) NSString *specific_status;
+
+@property (nonatomic, copy) NSString *subject;
+
+@property (nonatomic, copy) NSString *vod_quality;
+
+- (instancetype)initWithDict:(NSDictionary *)dict;
+
+
++ (instancetype)wonderFulWithDict:(NSDictionary *)dict;
+
 
 @end
 

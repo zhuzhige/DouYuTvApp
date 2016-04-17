@@ -162,26 +162,28 @@
 
 - (void)logoClick
 {
-
+    
 
 }
 
 - (void)historyClick
 {
-    
+    [self.navigationController pushViewController:[[UIViewController alloc]init] animated:YES];
+
     
 }
 
 - (void)searchClick
 {
     
-    
+    [self.navigationController pushViewController:[[UIViewController alloc]init] animated:YES];
+
 }
 
 - (void)scanClick
 {
     
-    
+    [self.navigationController pushViewController:[[UIViewController alloc]init] animated:YES];
 }
 
 

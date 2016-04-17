@@ -7,7 +7,8 @@
 //
 
 #import "DGWonderfulController.h"
-#import "DGHomeLiveViewCell.h"
+#import "DGWonderfulCell.h"
+#import "DGWonderFulModel.h"
 #import <MJRefresh.h>
 #import <AFNetworking.h>
 
@@ -29,9 +30,11 @@ static NSString * const reuseIdentifier = @"wonderCell";
     // self.clearsSelectionOnViewWillAppear = NO;
     [self setUp];
     // Register cell classes
-    [self.collectionView registerClass:[DGHomeLiveViewCell class] forCellWithReuseIdentifier:reuseIdentifier];
+    [self.collectionView registerClass:[DGWonderfulCell class] forCellWithReuseIdentifier:reuseIdentifier];
     
     [self setupRefresh];
+    
+    [self loadWonderfulModelWith:_data.count];
     // Do any additional setup after loading the view.
 }
 
@@ -92,7 +95,8 @@ static NSString * const reuseIdentifier = @"wonderCell";
 
 - (void)headRefresh
 {
-
+    [self loadWonderfulModelWith:_data.count];
+    [self.collectionView.mj_header endRefreshing];
 
 }
 
@@ -104,11 +108,25 @@ static NSString * const reuseIdentifier = @"wonderCell";
     
     //http://capi.douyucdn.cn/api/v1/getCustomRoom?aid=ios&client_sys=ios&tagIds=133_44_170_174_72_159_136_134_195_137_&time=1460796900&auth=19a2a73713d49352fc9355a9ea3b0248
     //http://capi.douyucdn.cn/api/v1/getColumnRoom/3?aid=ios&client_sys=ios&limit=20&offset=0&time=1460796960&auth=46e142cbe25a2b7613adde8be977f77e
-    
-    AFHTTPSessionManager *mgr = [AFHTTPSessionManager manager];
-    [mgr GET:@"http://capi.douyucdn.cn/api/v1/getColumnRoom/3?aid=ios&client_sys=ios&limit=20&offset=0&time=1460796960&auth=1" parameters:nil progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-        NSLog(@"%@",responseObject);
-    } failure:nil];
+    [self loadWonderfulModelWith:_data.count];
+    [self.collectionView.mj_footer endRefreshingWithNoMoreData];
+}
+
+- (void)loadWonderfulModelWith:(NSInteger)offset
+{
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        AFHTTPSessionManager *mgr = [AFHTTPSessionManager manager];
+        [mgr GET:[NSString stringWithFormat:kWonderfulUrl,offset]  parameters:nil progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+            NSMutableArray *array = [NSMutableArray array];
+            for (NSDictionary *dict in responseObject[@"data"]) {
+                DGWonderFulModel *model = [DGWonderFulModel wonderFulWithDict:dict];
+                [array addObject:model];
+            }
+            _data = array;
+            //刷新cell
+            [self.collectionView reloadData];
+        } failure:nil];
+    });
 }
 /*
 #pragma mark - Navigation
@@ -122,18 +140,13 @@ static NSString * const reuseIdentifier = @"wonderCell";
 
 #pragma mark <UICollectionViewDataSource>
 
-- (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
-    return 1;
-}
-
-
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-    return 15;
+    return _data.count;
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
-    DGHomeLiveViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
-    
+    DGWonderfulCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
+    [cell setModel:_data[indexPath.row]];
     // Configure the cell
     
     return cell;

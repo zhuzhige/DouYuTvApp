@@ -40,7 +40,8 @@
 		0D9AC4451CC0EA520080624F /* DGSectionHeadView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D9AC4441CC0EA520080624F /* DGSectionHeadView.m */; };
 		0D9AC4471CC0FDFC0080624F /* DGSectionHeadView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0D9AC4461CC0FDFC0080624F /* DGSectionHeadView.xib */; };
 		0D9AC4511CC228C10080624F /* DGWonderfulController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D9AC4501CC228C10080624F /* DGWonderfulController.m */; };
-		0D9AC4541CC239C00080624F /* DGWonderFulCellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D9AC4531CC239C00080624F /* DGWonderFulCellModel.m */; };
+		0D9AC4541CC239C00080624F /* DGWonderFulModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D9AC4531CC239C00080624F /* DGWonderFulModel.m */; };
+		0D9AC4571CC3A37B0080624F /* DGWonderfulCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D9AC4561CC3A37B0080624F /* DGWonderfulCell.m */; };
 		0DED9CAA1CB5C989002EA021 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DED9CA91CB5C989002EA021 /* main.m */; };
 		0DED9CB31CB5C989002EA021 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0DED9CB11CB5C989002EA021 /* Main.storyboard */; };
 		0DED9CB51CB5C989002EA021 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0DED9CB41CB5C989002EA021 /* Assets.xcassets */; };
@@ -131,8 +132,10 @@
 		0D9AC4461CC0FDFC0080624F /* DGSectionHeadView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DGSectionHeadView.xib; sourceTree = "<group>"; };
 		0D9AC44F1CC228C10080624F /* DGWonderfulController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DGWonderfulController.h; sourceTree = "<group>"; };
 		0D9AC4501CC228C10080624F /* DGWonderfulController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DGWonderfulController.m; sourceTree = "<group>"; };
-		0D9AC4521CC239C00080624F /* DGWonderFulCellModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DGWonderFulCellModel.h; sourceTree = "<group>"; };
-		0D9AC4531CC239C00080624F /* DGWonderFulCellModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DGWonderFulCellModel.m; sourceTree = "<group>"; };
+		0D9AC4521CC239C00080624F /* DGWonderFulModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DGWonderFulModel.h; sourceTree = "<group>"; };
+		0D9AC4531CC239C00080624F /* DGWonderFulModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DGWonderFulModel.m; sourceTree = "<group>"; };
+		0D9AC4551CC3A37B0080624F /* DGWonderfulCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DGWonderfulCell.h; sourceTree = "<group>"; };
+		0D9AC4561CC3A37B0080624F /* DGWonderfulCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DGWonderfulCell.m; sourceTree = "<group>"; };
 		0DED9CA51CB5C989002EA021 /* DGCars.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DGCars.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0DED9CA91CB5C989002EA021 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		0DED9CB21CB5C989002EA021 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -291,8 +294,8 @@
 				0D9AC4391CC097B60080624F /* 首页头部轮播部分模型 */,
 				0D9AC4371CBF9DE60080624F /* 首页圆形推荐部分模型 */,
 				0D9AC4381CBF9E170080624F /* 首页方形推荐部分模型 */,
-				0D9AC4521CC239C00080624F /* DGWonderFulCellModel.h */,
-				0D9AC4531CC239C00080624F /* DGWonderFulCellModel.m */,
+				0D9AC4521CC239C00080624F /* DGWonderFulModel.h */,
+				0D9AC4531CC239C00080624F /* DGWonderFulModel.m */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -305,6 +308,8 @@
 				0D9AC43D1CC0CD8A0080624F /* 圆形cell子cell */,
 				0D9AC43C1CC0CD640080624F /* 方形cell子cell */,
 				0D9AC4481CC126D70080624F /* 方形分组栏View */,
+				0D9AC4551CC3A37B0080624F /* DGWonderfulCell.h */,
+				0D9AC4561CC3A37B0080624F /* DGWonderfulCell.m */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -758,8 +763,9 @@
 				0D8B15D61CBBDE06001D9AD5 /* DGHomeRoundModel.m in Sources */,
 				0D9AC4511CC228C10080624F /* DGWonderfulController.m in Sources */,
 				0D5638631CB914BB00BB23F4 /* UIBarButtonItem+HKExtension.m in Sources */,
+				0D9AC4571CC3A37B0080624F /* DGWonderfulCell.m in Sources */,
 				0D5638A81CB9152F00BB23F4 /* DGLiveController.m in Sources */,
-				0D9AC4541CC239C00080624F /* DGWonderFulCellModel.m in Sources */,
+				0D9AC4541CC239C00080624F /* DGWonderFulModel.m in Sources */,
 				0D9AC4451CC0EA520080624F /* DGSectionHeadView.m in Sources */,
 				0D5638A41CB9152F00BB23F4 /* DGHomeRoundCell.m in Sources */,
 				0D5638641CB914BB00BB23F4 /* UIView+HKExtension.m in Sources */,

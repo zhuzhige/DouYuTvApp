@@ -22,6 +22,8 @@
 //主要内容
 #define kMainUrl @"http://www.douyutv.com/api/v1/channel?aid=android&client_sys=ios"
 
+//奇葩内容
+#define kWonderfulUrl @"http://capi.douyucdn.cn/api/v1/getColumnRoom/3?aid=ios&client_sys=ios&limit=20&offset=%ld&time=1460796960&auth=1"
 
 //栏目界面接口
 #define kColumnUrl @"http://www.douyutv.com/api/v1/game?aid=android&client_sys=ios"
