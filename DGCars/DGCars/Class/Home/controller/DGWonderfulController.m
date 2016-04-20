@@ -34,7 +34,7 @@ static NSString * const reuseIdentifier = @"wonderCell";
     
     [self setupRefresh];
     
-    [self loadWonderfulModelWith:_data.count];
+    [self loadWonderfulModelWith:0];
     // Do any additional setup after loading the view.
 }
 
@@ -95,8 +95,7 @@ static NSString * const reuseIdentifier = @"wonderCell";
 
 - (void)headRefresh
 {
-    [self loadWonderfulModelWith:_data.count];
-    [self.collectionView.mj_header endRefreshing];
+    [self loadWonderfulModelWith:0];
 
 }
 
@@ -109,7 +108,6 @@ static NSString * const reuseIdentifier = @"wonderCell";
     //http://capi.douyucdn.cn/api/v1/getCustomRoom?aid=ios&client_sys=ios&tagIds=133_44_170_174_72_159_136_134_195_137_&time=1460796900&auth=19a2a73713d49352fc9355a9ea3b0248
     //http://capi.douyucdn.cn/api/v1/getColumnRoom/3?aid=ios&client_sys=ios&limit=20&offset=0&time=1460796960&auth=46e142cbe25a2b7613adde8be977f77e
     [self loadWonderfulModelWith:_data.count];
-    [self.collectionView.mj_footer endRefreshingWithNoMoreData];
 }
 
 - (void)loadWonderfulModelWith:(NSInteger)offset
@@ -125,6 +123,10 @@ static NSString * const reuseIdentifier = @"wonderCell";
             _data = array;
             //刷新cell
             [self.collectionView reloadData];
+            
+            if (offset != 0) {
+                [self.collectionView.mj_footer endRefreshingWithNoMoreData];
+            }else{[self.collectionView.mj_header endRefreshing];}
         } failure:nil];
     });
 }

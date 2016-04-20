@@ -42,6 +42,8 @@
 		0D9AC4511CC228C10080624F /* DGWonderfulController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D9AC4501CC228C10080624F /* DGWonderfulController.m */; };
 		0D9AC4541CC239C00080624F /* DGWonderFulModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D9AC4531CC239C00080624F /* DGWonderFulModel.m */; };
 		0D9AC4571CC3A37B0080624F /* DGWonderfulCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D9AC4561CC3A37B0080624F /* DGWonderfulCell.m */; };
+		0D9AC45C1CC4E7130080624F /* DGHomeGameCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D9AC45B1CC4E7130080624F /* DGHomeGameCell.m */; };
+		0D9AC45F1CC4E9CE0080624F /* DGHomeGameViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D9AC45E1CC4E9CE0080624F /* DGHomeGameViewCell.m */; };
 		0DED9CAA1CB5C989002EA021 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DED9CA91CB5C989002EA021 /* main.m */; };
 		0DED9CB31CB5C989002EA021 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0DED9CB11CB5C989002EA021 /* Main.storyboard */; };
 		0DED9CB51CB5C989002EA021 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0DED9CB41CB5C989002EA021 /* Assets.xcassets */; };
@@ -136,6 +138,10 @@
 		0D9AC4531CC239C00080624F /* DGWonderFulModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DGWonderFulModel.m; sourceTree = "<group>"; };
 		0D9AC4551CC3A37B0080624F /* DGWonderfulCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DGWonderfulCell.h; sourceTree = "<group>"; };
 		0D9AC4561CC3A37B0080624F /* DGWonderfulCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DGWonderfulCell.m; sourceTree = "<group>"; };
+		0D9AC45A1CC4E7130080624F /* DGHomeGameCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DGHomeGameCell.h; sourceTree = "<group>"; };
+		0D9AC45B1CC4E7130080624F /* DGHomeGameCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DGHomeGameCell.m; sourceTree = "<group>"; };
+		0D9AC45D1CC4E9CE0080624F /* DGHomeGameViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DGHomeGameViewCell.h; sourceTree = "<group>"; };
+		0D9AC45E1CC4E9CE0080624F /* DGHomeGameViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DGHomeGameViewCell.m; sourceTree = "<group>"; };
 		0DED9CA51CB5C989002EA021 /* DGCars.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DGCars.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0DED9CA91CB5C989002EA021 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		0DED9CB21CB5C989002EA021 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -278,10 +284,10 @@
 				0D5638821CB9152F00BB23F4 /* DGHomeController.m */,
 				0D5638831CB9152F00BB23F4 /* DGrecommendViewController.h */,
 				0D5638841CB9152F00BB23F4 /* DGrecommendViewController.m */,
-				0D56387D1CB9152F00BB23F4 /* DGentertainController.h */,
-				0D56387E1CB9152F00BB23F4 /* DGentertainController.m */,
 				0D56387F1CB9152F00BB23F4 /* DGgameController.h */,
 				0D5638801CB9152F00BB23F4 /* DGgameController.m */,
+				0D56387D1CB9152F00BB23F4 /* DGentertainController.h */,
+				0D56387E1CB9152F00BB23F4 /* DGentertainController.m */,
 				0D9AC44F1CC228C10080624F /* DGWonderfulController.h */,
 				0D9AC4501CC228C10080624F /* DGWonderfulController.m */,
 			);
@@ -294,8 +300,7 @@
 				0D9AC4391CC097B60080624F /* 首页头部轮播部分模型 */,
 				0D9AC4371CBF9DE60080624F /* 首页圆形推荐部分模型 */,
 				0D9AC4381CBF9E170080624F /* 首页方形推荐部分模型 */,
-				0D9AC4521CC239C00080624F /* DGWonderFulModel.h */,
-				0D9AC4531CC239C00080624F /* DGWonderFulModel.m */,
+				0D9AC4581CC4E5BC0080624F /* 首页奇葩分页部分模型 */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -308,8 +313,11 @@
 				0D9AC43D1CC0CD8A0080624F /* 圆形cell子cell */,
 				0D9AC43C1CC0CD640080624F /* 方形cell子cell */,
 				0D9AC4481CC126D70080624F /* 方形分组栏View */,
-				0D9AC4551CC3A37B0080624F /* DGWonderfulCell.h */,
-				0D9AC4561CC3A37B0080624F /* DGWonderfulCell.m */,
+				0D9AC4591CC4E5DF0080624F /* 奇葩分页cell */,
+				0D9AC45A1CC4E7130080624F /* DGHomeGameCell.h */,
+				0D9AC45B1CC4E7130080624F /* DGHomeGameCell.m */,
+				0D9AC45D1CC4E9CE0080624F /* DGHomeGameViewCell.h */,
+				0D9AC45E1CC4E9CE0080624F /* DGHomeGameViewCell.m */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -472,6 +480,24 @@
 				0D9AC4461CC0FDFC0080624F /* DGSectionHeadView.xib */,
 			);
 			name = "方形分组栏View";
+			sourceTree = "<group>";
+		};
+		0D9AC4581CC4E5BC0080624F /* 首页奇葩分页部分模型 */ = {
+			isa = PBXGroup;
+			children = (
+				0D9AC4521CC239C00080624F /* DGWonderFulModel.h */,
+				0D9AC4531CC239C00080624F /* DGWonderFulModel.m */,
+			);
+			name = "首页奇葩分页部分模型";
+			sourceTree = "<group>";
+		};
+		0D9AC4591CC4E5DF0080624F /* 奇葩分页cell */ = {
+			isa = PBXGroup;
+			children = (
+				0D9AC4551CC3A37B0080624F /* DGWonderfulCell.h */,
+				0D9AC4561CC3A37B0080624F /* DGWonderfulCell.m */,
+			);
+			name = "奇葩分页cell";
 			sourceTree = "<group>";
 		};
 		0DED9C9C1CB5C989002EA021 = {
@@ -759,6 +785,7 @@
 				0D5638711CB914F100BB23F4 /* BarrageModel.m in Sources */,
 				0D5638701CB914F100BB23F4 /* DGSocks.m in Sources */,
 				0D5638A11CB9152F00BB23F4 /* DGHomeController.m in Sources */,
+				0D9AC45F1CC4E9CE0080624F /* DGHomeGameViewCell.m in Sources */,
 				0D5638621CB914BB00BB23F4 /* NSString+Hash.m in Sources */,
 				0D8B15D61CBBDE06001D9AD5 /* DGHomeRoundModel.m in Sources */,
 				0D9AC4511CC228C10080624F /* DGWonderfulController.m in Sources */,
@@ -770,6 +797,7 @@
 				0D5638A41CB9152F00BB23F4 /* DGHomeRoundCell.m in Sources */,
 				0D5638641CB914BB00BB23F4 /* UIView+HKExtension.m in Sources */,
 				0D9AC4361CBF9AF30080624F /* DGHomeRoundItemModel.m in Sources */,
+				0D9AC45C1CC4E7130080624F /* DGHomeGameCell.m in Sources */,
 				0D5638AA1CB9152F00BB23F4 /* DGMeController.m in Sources */,
 				0D5638721CB914F100BB23F4 /* chatmsgModel.m in Sources */,
 				0DED9CAA1CB5C989002EA021 /* main.m in Sources */,

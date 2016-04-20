@@ -24,14 +24,71 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+#pragma mark <UITableViewDataSource>
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+
+    return 2;
 }
-*/
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return 1;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+//    if (indexPath.section == 0) {//第一组
+//        DGHomeRoundCell *cell = [tableView dequeueReusableCellWithIdentifier:@"round"];
+//        [cell roundCellWith:_roundData];
+//        cell.delegate = self;
+//        return cell;
+//    }else{
+//        
+//        DGHomeSquareCell *cell = [tableView dequeueReusableCellWithIdentifier:@"square"];
+//        [cell squareCellWith:_squareData[indexPath.section - 1]];
+//        return cell;
+//    }
+    UITableViewCell *cell = [[UITableViewCell alloc]init];
+    return cell;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
+{
+    if (section != 0) {
+        return 35;
+    }
+    
+    return 0.01;
+    
+}
+
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    
+    if (indexPath.section == 0) {
+        return 110;
+    }
+    return 280 *KWidth_Scale;
+    
+    
+}
+
+//- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
+//{
+//    if (section != 0) {
+//        DGSectionHeadView *headView = [[DGSectionHeadView alloc]init];
+//        DGHomeSquareItemModel *model = _squareData[section-1];
+//        headView.model = model;
+//        headView.delegate = self;
+//        
+//        return headView;
+//    }
+//    return nil;
+//}
+
 
 @end

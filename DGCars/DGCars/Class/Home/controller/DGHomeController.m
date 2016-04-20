@@ -57,7 +57,7 @@
     
     UIView *indcatorView = [[UIView alloc]init];
     indcatorView.backgroundColor = RGBCOLOR(255, 125, 0);
-    indcatorView.y = titleView.height - indcatorView.height;
+    indcatorView.y = titleView.height - indcatorView.height - 3;
     indcatorView.height = 3;
     indcatorView.tag = -1;
     _indcatorView = indcatorView;

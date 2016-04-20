@@ -30,6 +30,7 @@
     //刷新界面
     if (model) {
         [_imageView sd_setImageWithURL:[NSURL URLWithString:model.room_src] placeholderImage:[UIImage imageNamed:@"占位图片"]];
+        #warning 观众数量可以分类计算
         
         _titleLable.text = model.room_name;
         _numberLable.text = [NSString stringWithFormat:@"%0.1f万",[model.online doubleValue]/10000];
